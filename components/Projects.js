@@ -50,7 +50,7 @@ const projects = [
     description: 'Cross-chain bridge usage and ecosystem interaction.',
     image: '/projects/wormhole.png',
     website: 'https://wormhole.com',
-    twitter: 'https://twitter.com/wormholecrypto'
+    twitter: 'https://x.com/wormhole'
   }
 ];
 
