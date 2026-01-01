@@ -7,14 +7,14 @@ const projects = [
   {
     name: 'Sui',
     role: 'Testnet Contributor',
-    description: 'Sui testnet participation, wallet testing and ecosystem tasks.',
+    description: 'Sui testnet participation and ecosystem testing.',
     image: '/projects/sui.png',
     website: 'https://sui.io',
     twitter: 'https://twitter.com/SuiNetwork'
   },
   {
     name: 'Arbitrum',
-    role: 'Early User / Tester',
+    role: 'Early User',
     description: 'L2 interaction, bridge usage and ecosystem exploration.',
     image: '/projects/arbitrum.png',
     website: 'https://arbitrum.io',
@@ -39,7 +39,7 @@ const projects = [
   {
     name: 'Caldera',
     role: 'Ecosystem Contributor',
-    description: 'Modular rollup ecosystem exploration and testing.',
+    description: 'Modular rollup ecosystem exploration.',
     image: '/projects/caldera.png',
     website: 'https://www.caldera.xyz',
     twitter: 'https://twitter.com/calderaxyz'
@@ -50,15 +50,14 @@ const projects = [
     description: 'Cross-chain bridge usage and ecosystem interaction.',
     image: '/projects/wormhole.png',
     website: 'https://wormhole.com',
-    twitter: 'https://x.com/wormhole'
+    twitter: 'https://twitter.com/wormholecrypto'
   }
 ];
 
 export default function Projects() {
-  const [index, setIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-<section id="projects" className="py-24">
     <section className="py-24">
       <div className="container">
         <h2 className="text-3xl font-bold mb-8">Projects</h2>
@@ -67,7 +66,7 @@ export default function Projects() {
           {projects.map((p, i) => (
             <div
               key={p.name}
-              onClick={() => setIndex(i)}
+              onClick={() => setActiveIndex(i)}
               className="cursor-pointer p-6 rounded-xl bg-slate-200 dark:bg-slate-700 hover:scale-105 transition"
             >
               <h3 className="font-semibold">{p.name}</h3>
@@ -77,14 +76,3 @@ export default function Projects() {
             </div>
           ))}
         </div>
-      </div>
-
-      {index !== null && (
-        <ProjectModal
-          project={projects[index]}
-          onClose={() => setIndex(null)}
-        />
-      )}
-    </section>
-  );
-}
