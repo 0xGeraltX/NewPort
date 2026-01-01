@@ -1,0 +1,1 @@
+export default function Contact(){return(<section className='py-24 bg-slate-50 dark:bg-slate-800'><div className='container'><h2 className='text-3xl font-bold mb-4'>Contact</h2><p>Email: GeraltWeb3@gmail.com</p><p>Twitter: @0xGeraltX</p><p>Telegram: DevilBoy08</p></div></section>);}
