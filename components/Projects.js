@@ -58,6 +58,7 @@ export default function Projects() {
   const [index, setIndex] = useState(null);
 
   return (
+<section id="projects" className="py-24">
     <section className="py-24">
       <div className="container">
         <h2 className="text-3xl font-bold mb-8">Projects</h2>
